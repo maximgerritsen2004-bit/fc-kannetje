@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>F.C. Kannetje — Straatvoetbal</title>
+  <meta name="description" content="F.C. Kannetje: straatvoetbal in wit, geel en zwart. Wees een mannetje, drink een kannetje. Selectie, uitslagen en Instagram.">
+  <meta name="theme-color" content="#0c0c0b">
+
+  <!-- Open Graph (for link previews on WhatsApp/Instagram etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="F.C. Kannetje — Straatvoetbal">
+  <meta property="og:description" content="Wees een mannetje, drink een kannetje.">
+  <meta property="og:image" content="assets/img/team.jpg">
+
+  <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/team.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Naar inhoud</a>
+
+  <!-- Scroll-driven football (decorative) -->
+  <div class="scroll-ball" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><use href="#ball"/></svg>
+  </div>
+
+  <!-- Custom cursor (desktop only, enabled by script.js) -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+  <!-- Shared SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ball" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="47" fill="#f5f3ea" stroke="#0c0c0b" stroke-width="4"/>
+      <polygon points="50,32 66,44 60,63 40,63 34,44" fill="#0c0c0b"/>
+      <g stroke="#0c0c0b" stroke-width="3.5" fill="none" stroke-linecap="round">
+        <path d="M50 32 V12 M66 44 L84 37 M60 63 L71 80 M40 63 L29 80 M34 44 L16 37"/>
+      </g>
+      <g fill="#0c0c0b">
+        <path d="M38 6 Q50 2 62 6 L58 13 L42 13 Z"/>
+        <path d="M89 30 Q96 43 94 56 L86 52 L83 37 Z"/>
+        <path d="M80 85 Q70 94 57 96 L60 88 L72 79 Z"/>
+        <path d="M20 85 Q30 94 43 96 L40 88 L28 79 Z"/>
+        <path d="M11 30 Q4 43 6 56 L14 52 L17 37 Z"/>
+      </g>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15m-6-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
+    </symbol>
+    <symbol id="ig" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="F.C. Kannetje, naar boven">
+      <img src="assets/img/logo.jpg" alt="" width="44" height="44">
+    </a>
+    <nav aria-label="Hoofdmenu">
+      <ul class="nav__links">
+        <li><a href="#team">Team</a></li>
+        <li><a href="#wedstrijden">Wedstrijden</a></li>
+        <li><a class="nav__ig" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="VOLG">
+          <svg width="18" height="18" aria-hidden="true"><use href="#ig"/></svg><span>Instagram</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <!-- Replace assets/img/team.jpg with a larger/better team photo whenever you like -->
+        <img src="assets/img/team.jpg" alt="" width="512" height="640" fetchpriority="high">
+      </div>
+      <div class="hero__lights" aria-hidden="true"></div>
+
+      <div class="hero__meta">
+        <span class="label">Straatvoetbal</span>
+        <span class="label label--line">Seizoen 2026</span>
+      </div>
+
+      <h1 class="hero__title" aria-label="F.C. Kannetje">
+        <span class="hero__line"><span class="hero__word">F.C.</span></span>
+        <span class="hero__line"><span class="hero__word hero__word--big" data-text="KANNETJE">KANNETJE</span></span>
+      </h1>
+
+      <p class="hero__tagline">Wees een mannetje,<br><em>drink een kannetje.</em></p>
+
+      <div class="sticker sticker--bronze" aria-label="Derde plaats Winnaarspoule 2025">
+        <span class="sticker__big">3e</span>
+        <span class="sticker__small">Winnaars&shy;poule 2025</span>
+      </div>
+
+      <a class="scroll-hint" href="#team" aria-label="Scroll naar het team">
+        <span class="scroll-hint__track"><span class="scroll-hint__dot"></span></span>
+        <span class="scroll-hint__text">Scroll</span>
+      </a>
+
+      <span class="crosshair crosshair--tl" aria-hidden="true"></span>
+      <span class="crosshair crosshair--br" aria-hidden="true"></span>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>F.C. Kannetje</span><i></i><span>Street Football</span><i></i><span>Wees een mannetje</span><i></i><span>Drink een kannetje</span><i></i>
+        <span>F.C. Kannetje</span><i></i><span>Street Football</span><i></i><span>Wees een mannetje</span><i></i><span>Drink een kannetje</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ 2. TEAM ============ -->
+    <section class="team section" id="team">
+      <div class="section__head reveal">
+        <span class="label">01 / Team</span>
+        <h2 class="h2">Wit. Geel.<br><span class="outline">Zwart.</span></h2>
+      </div>
+
+      <div class="team__intro reveal">
+        <p class="lead">F.C. Kannetje is een straatvoetbalteam met een duidelijke volgorde van zaken: eerst de bal, dan het kannetje.</p>
+        <!-- EDIT: add a few sentences about the team here (where you play, since when, etc.) -->
+        <p class="placeholder-text">[KORTE TEKST OVER HET TEAM — waar jullie spelen, sinds wanneer, waar jullie voor staan]</p>
+      </div>
+
+      <!-- Photo strip: add/remove <figure> blocks. Keep width/height on the img. -->
+      <div class="strip reveal" tabindex="0" aria-label="Fotostrip, scroll horizontaal">
+        <figure class="strip__item">
+          <img src="assets/img/team.jpg" alt="De selectie van F.C. Kannetje juichend op het veld" width="512" height="640" loading="lazy">
+          <figcaption>De selectie</figcaption>
+        </figure>
+        <figure class="strip__item">
+          <img src="assets/img/mascotte-win.jpg" alt="Poster: de mascotte van F.C. Kannetje met de tekst Win Win Win" width="512" height="640" loading="lazy">
+          <figcaption>Win win win</figcaption>
+        </figure>
+        <figure class="strip__item">
+          <img src="assets/img/de-aftrap.jpg" alt="Poster van De Aftrap 2.0: kannetjes drinken bij Schiller" width="512" height="640" loading="lazy">
+          <figcaption>De Aftrap 2.0</figcaption>
+        </figure>
+        <figure class="strip__item strip__item--empty">
+          <div class="strip__ph">[TEAMFOTO]</div>
+          <figcaption>Jouw foto hier</figcaption>
+        </figure>
+        <figure class="strip__item strip__item--empty">
+          <div class="strip__ph">[ACTIEFOTO]</div>
+          <figcaption>Jouw foto hier</figcaption>
+        </figure>
+      </div>
+
+      <!-- Squad 2026 — taken from the "Selectie 2026" Instagram post -->
+      <div class="squad reveal">
+        <h3 class="squad__title">Selectie 2026</h3>
+        <div class="squad__grid">
+          <div class="squad__group">
+            <h4>Keepers</h4>
+            <ul><li><b>1</b>N. Schreurs</li><li><b>99</b>L. TW</li></ul>
+          </div>
+          <div class="squad__group">
+            <h4>Verdediging</h4>
+            <ul>
+              <li><b>2</b>D. vd Sluis</li><li><b>3</b>J. Grevers</li><li><b>4</b>J. Grevers</li>
+              <li><b>5</b>E. Bassey <span class="cap">C</span></li><li><b>6</b>H. Swijtink</li><li><b>7</b>T. vd Dobbelsteen</li>
+            </ul>
+          </div>
+          <div class="squad__group">
+            <h4>Middenveld</h4>
+            <ul><li><b>9</b>T. Wille</li><li><b>10</b>J. Weerkamp</li><li><b>11</b>F. Obbink</li><li><b>14</b>L. Piek</li></ul>
+          </div>
+          <div class="squad__group">
+            <h4>Aanval</h4>
+            <ul><li><b>8</b>A. Grandez</li><li><b>13</b>O. Smit</li><li><b>15</b>F. Kirkskothen</li><li><b>16</b>K. Klein Tank</li><li><b>69</b>J. Hijink</li></ul>
+          </div>
+          <div class="squad__group">
+            <h4>Staf</h4>
+            <ul class="squad__staff"><li>M. Vreman</li><li>M. Gerritsen</li><li>R. te Welscher</li><li>D. Steenbeek</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. WEDSTRIJDEN ============ -->
+    <section class="matches section" id="wedstrijden">
+      <div class="section__head reveal">
+        <span class="label">02 / Wedstrijden</span>
+        <h2 class="h2">Speel&shy;dagen</h2>
+        <p class="section__sub">Straatvoetbaltoernooi, juni 2026</p>
+      </div>
+
+      <!-- Scoreboard tally for speeldag 1–5 (update when you add results) -->
+      <div class="board reveal" role="group" aria-label="Totaal speeldag 1 tot en met 5">
+        <div class="board__cell"><span class="board__num">5</span><span class="board__lbl">Gewonnen</span></div>
+        <div class="board__cell"><span class="board__num">2</span><span class="board__lbl">Gelijk</span></div>
+        <div class="board__cell"><span class="board__num">2</span><span class="board__lbl">Verloren</span></div>
+        <div class="board__cell"><span class="board__num">8–6</span><span class="board__lbl">Doelpunten</span></div>
+      </div>
+
+      <!--
+        MATCH CARDS
+        Each card = one match. Copy a card to add one.
+        Classes: is-win / is-draw / is-loss / is-upcoming
+      -->
+      <ol class="cards">
+        <li class="card card--next is-upcoming reveal">
+          <span class="card__tag">Volgende wedstrijd</span>
+          <div class="card__teams">
+            <span class="card__team card__team--us">F.C. Kannetje</span>
+            <span class="card__vs">VS</span>
+            <span class="card__team">[TEGENSTANDER]</span>
+          </div>
+          <div class="card__info"><span>[DATUM]</span><span>[TIJD]</span><span>[VELD]</span></div>
+        </li>
+
+        <li class="card is-pending reveal"><span class="card__tag">Speeldag 6</span>
+          <div class="card__row"><span>F.C. Kannetje</span><b>–</b></div>
+          <div class="card__row"><span>Dolfijntje</span><b>–</b></div>
+          <span class="card__note">[UITSLAG]</span>
+        </li>
+
+        <li class="card is-win reveal"><span class="card__tag">Speeldag 5</span>
+          <div class="card__row"><span>FC Knudde</span><b>0</b></div>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>1</b></div>
+        </li>
+        <li class="card is-draw reveal"><span class="card__tag">Speeldag 5</span>
+          <div class="card__row"><span>Ballie Patta's</span><b>0</b></div>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>0</b></div>
+        </li>
+
+        <li class="card is-win reveal"><span class="card__tag">Speeldag 4</span>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>3</b></div>
+          <div class="card__row"><span>De Kamelen</span><b>0</b></div>
+        </li>
+        <li class="card is-win reveal"><span class="card__tag">Speeldag 4</span>
+          <div class="card__row"><span>100 B</span><b>1</b></div>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>2</b></div>
+        </li>
+
+        <li class="card is-loss reveal"><span class="card__tag">Speeldag 3</span>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>0</b></div>
+          <div class="card__row"><span>Dolfijntje</span><b>1</b></div>
+        </li>
+
+        <li class="card is-draw reveal"><span class="card__tag">Speeldag 2</span>
+          <div class="card__row"><span>Baldadig</span><b>0</b></div>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>0</b></div>
+        </li>
+        <li class="card is-loss reveal"><span class="card__tag">Speeldag 2</span>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>0</b></div>
+          <div class="card__row"><span>The Basement</span><b>4</b></div>
+        </li>
+
+        <li class="card is-win reveal"><span class="card__tag">Speeldag 1</span>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>1</b></div>
+          <div class="card__row"><span>FC Vangnet</span><b>0</b></div>
+        </li>
+        <li class="card is-win reveal"><span class="card__tag">Speeldag 1</span>
+          <div class="card__row"><span>IJzerlo</span><b>0</b></div>
+          <div class="card__row card__row--us"><span>F.C. Kannetje</span><b>1</b></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ KICK ZONE (interactive) ============ -->
+    <section class="kick" aria-labelledby="kick-title">
+      <div class="kick__copy reveal">
+        <span class="label">Penalty</span>
+        <h2 class="kick__title" id="kick-title">Durf je?</h2>
+        <p>Raak de speler aan en hij schiet.</p>
+      </div>
+
+      <button class="kicker" type="button" aria-label="Laat de speler de bal wegschieten" data-cursor="SHOOT">
+        <svg class="kicker__svg" viewBox="0 0 220 260" aria-hidden="true">
+          <g class="kicker__body" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="96" cy="34" r="20" fill="currentColor" stroke="none"/>
+            <path d="M92 64 L82 140"/>
+            <path class="kicker__arm-a" d="M90 76 L56 104 L44 132"/>
+            <path class="kicker__arm-b" d="M92 78 L126 98 L148 88"/>
+            <path d="M82 140 L70 196 L64 244 L44 246"/>
+            <g class="kicker__leg">
+              <path d="M82 140 L112 190 L140 226 L158 222"/>
+            </g>
+          </g>
+        </svg>
+        <span class="kicker__ball"><svg viewBox="0 0 100 100"><use href="#ball"/></svg></span>
+        <span class="kicker__hint">Tik&nbsp;/&nbsp;hover</span>
+      </button>
+
+      <div class="kick__goal" aria-hidden="true"><span>GOAL</span></div>
+      <p class="sr-only" aria-live="polite" id="kick-status"></p>
+    </section>
+
+    <!-- ============ 4. INSTAGRAM ============ -->
+    <section class="social section" id="instagram">
+      <div class="marquee marquee--yellow marquee--reverse" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Kannetje FC</span><i></i><span>Street Football</span><i></i><span>Kannetje FC</span><i></i><span>Street Football</span><i></i>
+          <span>Kannetje FC</span><i></i><span>Street Football</span><i></i><span>Kannetje FC</span><i></i><span>Street Football</span><i></i>
+        </div>
+      </div>
+
+      <div class="social__inner reveal">
+        <span class="label">03 / Instagram</span>
+        <h2 class="social__title">Volg<br>F.C. Kannetje</h2>
+        <p class="lead">Uitslagen, speelschema's, transfernieuws en De Aftrap. Het staat allemaal eerst op Instagram.</p>
+        <a class="btn" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="GO">
+          <svg width="22" height="22" aria-hidden="true"><use href="#ig"/></svg>
+          <span>@kannetjefc</span>
+          <span class="btn__ball" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#ball"/></svg></span>
+          <svg class="btn__arrow" width="22" height="22" aria-hidden="true"><use href="#arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="posters">
+        <a class="poster reveal" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="BEKIJK">
+          <img src="assets/img/speeldag-4.jpg" alt="Instagram-post: uitslagen speeldag 4" width="512" height="640" loading="lazy"></a>
+        <a class="poster reveal" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="BEKIJK">
+          <img src="assets/img/selectie-2026.jpg" alt="Instagram-post: selectie 2026" width="512" height="640" loading="lazy"></a>
+        <a class="poster reveal" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="BEKIJK">
+          <img src="assets/img/speelschema-week-1.jpg" alt="Instagram-post: speelschema week 1" width="512" height="640" loading="lazy"></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 5. FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/img/logo.jpg" alt="Logo F.C. Kannetje" width="64" height="64" loading="lazy">
+      <div>
+        <strong>F.C. Kannetje</strong>
+        <span>Street Football</span>
+      </div>
+    </div>
+    <a class="footer__link" href="https://www.instagram.com/kannetjefc?stkn=bmk1ODVvenNvcTBl" target="_blank" rel="noopener" data-cursor="VOLG">
+      <svg width="18" height="18" aria-hidden="true"><use href="#ig"/></svg> Instagram
+    </a>
+    <small>© 2026 F.C. Kannetje</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
